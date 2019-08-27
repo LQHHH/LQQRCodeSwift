@@ -40,7 +40,7 @@ class QRCodeGenerateViewController: UIViewController {
         }
         textField.resignFirstResponder()
         
-        let image = UIImage.LQLogoQRCodeGenerate(QRCodeInfo: textField.text!, QRCodeImageSize: CGSize.init(width: 200, height:200), logo: UIImage(named: "logo.png")!)
+        let image = UIImage.LQQRCodeGenerate(QRCodeInfo: textField.text!, QRCodeImageSize: CGSize.init(width: 200, height:200), logo: UIImage(named: "logo.png")!)
         imageView.image = image
     }
     

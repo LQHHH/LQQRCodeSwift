@@ -12,7 +12,7 @@ import UIKit
 extension UIImage {
     
     // MAKR: - 二维码生成器 中间有图片
-    class func LQLogoQRCodeGenerate(QRCodeInfo message:String,QRCodeImageSize size:CGSize,logo centerImage:UIImage) -> UIImage {
+    class func LQQRCodeGenerate(QRCodeInfo message:String,QRCodeImageSize size:CGSize,logo centerImage:UIImage) -> UIImage {
         
         let image = LQQRCodeGenerate(QRCodeInfo: message, QRCodeImageSize: size)
         UIGraphicsBeginImageContextWithOptions(image.size, true, UIScreen.main.scale)
