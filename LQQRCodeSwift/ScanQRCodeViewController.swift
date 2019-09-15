@@ -15,6 +15,7 @@ class ScanQRCodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .black
 
         AVCaptureDevice.requestAccess(for: .video) { granted in
             if (!granted) {
@@ -22,7 +23,9 @@ class ScanQRCodeViewController: UIViewController {
                 return;
             }
             
-            self.captureSession.startRunning()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1, execute: {
+                self.captureSession.startRunning()
+            })
         }
         
     }
